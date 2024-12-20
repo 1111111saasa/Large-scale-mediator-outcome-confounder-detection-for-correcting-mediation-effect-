@@ -20,33 +20,38 @@ R-4.3.2
 \code\DTM\total_simu_code_DTM.R
 
 Note that there are various parameters in the code, we explain them one by one:
- ## n:sample size 
- ## B:refinement times
- ## p:dimension
- ## ratio:splitting ratio
- ## pi10:portion of alpha!=0,beta=0 in the mediaton model
- ## pi01:portion of alpha=0,beta!=0 in the mediaton model  
- ## nonzero:Locations of mediators 
- ## q:targrt FDR level
- ## tau:signal strength 
- ## corr:dependence
+
+  `n:sample size`
+  
+  `B:refinement times`
+  
+  `p:dimension`
+  
+  `ratio:splitting ratio`
+  
+  `pi10:portion of alpha!=0,beta=0 in the mediaton model`
+  
+  `pi01:portion of alpha=0,beta!=0 in the mediaton model`
+  
+  `nonzero:Locations of mediators`
+  
+  `q:targrt FDR level`
+  
+  `tau:signal strength`
+  
+  `corr:dependence`
+  
+  To reproduce the results of toy example, we need to set n=400, p=4000. 
 
 
-The purpose of this template repository is to provide a mechanism for
-author(s) to share their materials via a Git repository, hosted on a
-cloud-based repository manager such as GitHub or GitLab. This provides
-the following advantages for author(s):
+## Codes for reproducing results in Section 4.1
+\code\DTM\total_simu_code_DTM.R
+\code\DTM\oracle_DTM.R
+To reproduce the results in figure 3, we need to fix n=400 and alter the p from 1000 to 5000 in the interval of 500.
+For the results in Table 1, we need to alter the `tau` and `pi01`.   
 
-1.  Analyses (including code, narrative text, output, plots, etc) can be
-    version controlled (or branched or forked) allowing original
-    author(s) to continue to develop the analyses or other data analysts
-    to build off the analyses. Also iterations and changes to the
-    analysis are then available via the Git commit history.
-2.  Materials are easily available to other researchers.
-3.  Preparing a repository also makes it easy for the JASA Associate
-    Editors for Reproducibility to copy the materials for a JASA article
-    into the JASA GitHub repository where the final paper products are stored
-    after publication (https://github.com/jasa-acs).
+
+
 
 ## How does the process work?
 
