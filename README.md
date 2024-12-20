@@ -1,20 +1,24 @@
-JASA Reproducibility Materials Template
+DTM
 ================
 
-This GitHub repository contains a suggested template structure for authors who
-submit to JASA (either Applications and Case Studies or Theory and
-Methods) to include materials to reproduce analyses, visualizations, and
-tables.
+This study introduces a novel framework for detecting confounders in high-dimensional mediation models, addressing challenges in mediation analysis caused by confounding variables. The data-driven method uses symmetric data aggregation to construct test statistic pairs and applies a double filter for confounder identification. This approach controls the false discovery rate (FDR) while enhancing confounder detection. Theoretical and empirical analyses demonstrate that the method controls FDR asymptotically and ensures high detection power. Simulations show robust performance, emphasizing the importance of confounder detection in improving the accuracy of mediation effect estimates.
 
-We provide this template as a default structure that we (the JASA Associate Editors of Reproducibility) think could be
-useful for many projects, either as is or with modifications by authors.
-However, the template is intended to be helpful and is by no means
-required of authors. Authors should consult [our reproducibility
-guide](https://jasa-acs.github.io/repro-guide) for details on what is
-required of reproducibility materials submitted with JASA revisions (not
-required upon initial submission).
+OVERVIEW
+================
+This file provideS the exact code for reproducing the numerical results in the paper: Large scale mediator-outcome confounder detection for correcting mediation effect in high-dimensional mediation model.
 
-## Why is a template repository useful?
+Our code consists of three folders: DTM, mediation correction, Extension on GLM Model. DTM produces the toy example in section2 and the simulation results in section 4.1, mediation correction produces the simulation results in section 4.2, and Extension on GLM Model produces the results of GLM model in SUPPLEMENTARY MATERIAL.
+
+
+
+Guides for the codes in folder \code\DTM
+=========================================
+## Enviroment 
+R-4.3.2
+
+## Codes for reproducing results in Section 2
+
+
 
 The purpose of this template repository is to provide a mechanism for
 author(s) to share their materials via a Git repository, hosted on a
