@@ -5,7 +5,7 @@ This study introduces a novel framework for detecting confounders in high-dimens
 
 OVERVIEW
 ================
-This file provideS the exact code for reproducing the numerical results in the paper: Large scale mediator-outcome confounder detection for correcting mediation effect in high-dimensional mediation model.
+This file provides the exact code for reproducing the numerical results in the paper: Large scale mediator-outcome confounder detection for correcting mediation effect in high-dimensional mediation model.
 
 Our code consists of three folders: DTM, mediation correction, Extension on GLM Model. DTM produces the toy example in section2 and the simulation results in section 4.1, mediation correction produces the simulation results in section 4.2, and Extension on GLM Model produces the results of GLM model in SUPPLEMENTARY MATERIAL.
 
@@ -17,7 +17,19 @@ Guides for the codes in folder \code\DTM
 R-4.3.2
 
 ## Codes for reproducing results in Section 2
+\code\DTM\total_simu_code_DTM.R
 
+Note that there are various parameters in the code, we explain them one by one:
+ ## n:sample size 
+ ## B:refinement times
+ ## p:dimension
+ ## ratio:splitting ratio
+ ## pi10:portion of alpha!=0,beta=0 in the mediaton model
+ ## pi01:portion of alpha=0,beta!=0 in the mediaton model  
+ ## nonzero:Locations of mediators 
+ ## q:targrt FDR level
+ ## tau:signal strength 
+ ## corr:dependence
 
 
 The purpose of this template repository is to provide a mechanism for
