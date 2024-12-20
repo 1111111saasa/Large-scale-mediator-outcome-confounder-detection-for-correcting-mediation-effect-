@@ -68,17 +68,24 @@ Guides for the codes in folder \code\Mediation effect correction
 \code\Mediation effect correction\mediation effect correction.R
 
 To reproduce the results in section 4.2, we need to alter the `corr` and `iota`.
+Note that this part applys the method of DACT [Liu, Z., Shen, J., Barfield, R., Schwartz, J., Baccarelli, A. A., & Lin, X. (2022). *Large-scale hypothesis testing for causal mediation effects with applications in genome-wide epigenetic studies*. *Journal of the American Statistical Association, 117*(537), 67–81.](https://doi.org/10.1080/01621459.2021.1944104).
+
+Additionally, this part utilizes the method HIMA2. [Perera, C., Zhang, H., Zheng, Y., Hou, L., Qu, A., Zheng, C., Xie, K., & Liu, L. (2022). *Hima2: High-dimensional mediation analysis and its application in epigenome-wide DNA methylation data*. *BMC Bioinformatics, 23*(1), 296.](https://doi.org/10.1186/s12859-022-04884-w)
+
+
 
 Guides for the codes in folder \code\Extension on GLM
 ===============================================
 
 ## Codes for reproducing results in SUPPLEMENTARY MATERIAL
+
 \code\Extension on GLM\glm_total_BB.R
+
 \code\Extension on GLM\glm_total_BC.R
+
 \code\Extension on GLM\oracle_glm_total_BB.R
+
 \code\Extension on GLM\oracle_glm_total_BC.R
 
-
-## References
 
 
