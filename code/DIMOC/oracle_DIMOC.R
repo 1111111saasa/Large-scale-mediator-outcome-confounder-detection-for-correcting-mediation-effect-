@@ -19,7 +19,7 @@ registerDoParallel(cl)
 ##########################################
 n =400  ##sample size
 B=30    ##refinement times
-p =400  ##dimension
+p =2000  ##dimension
 ratio=0.5 ##splitting ratio
 pi10 = 0.03  ##portion of alpha!=0,beta=0
 pi01 = 0.01
