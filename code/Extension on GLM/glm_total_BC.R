@@ -11,7 +11,7 @@ library(MASS)
 ##########################################
 ######## Settings: Parallel ##############
 #######################################
-ns =48          ###simulation times
+ns =100          ###simulation times
 no_cores <- detectCores()
 cl <- makeCluster(no_cores)
 registerDoParallel(cl)
@@ -99,7 +99,7 @@ Process <- function(n,p,pi,nonzero,q,tau,B,correlation=corr){
   
   
   
-#---------------------------DTM-----------------------------------------------  
+#---------------------------DIMOC-----------------------------------------------  
   
   ######################################################
   ## Estimate alpha & beta for Y=aX+sum_{k=1}^p M_k+e ##
@@ -218,12 +218,12 @@ Process <- function(n,p,pi,nonzero,q,tau,B,correlation=corr){
   #####################################################
   ###### main function for detecting confounders  #####
   #####################################################  
-  DTM=function(X,M,Y,n,p,q,pi,B,ratio=0.5){
+  DIMOC=function(X,M,Y,n,p,q,pi,B,ratio=0.5){
     result_rej2<-rep(0,p)
     All_result <- vector("list",length = B)
     for (b in 1:B)
     {
-      #######DTM#############
+      #######DIMOC#############
       data=list("Y"=Y,'covariate'=cbind(X,M))
       S01=rep(0,time=p);S02=rep(0,time=p)
       support_S02=c((pi[1]*p+1):(sum(pi[1:2])*p),(sum(pi[1:3])*p+1):p)      ##beta
@@ -307,7 +307,7 @@ Process <- function(n,p,pi,nonzero,q,tau,B,correlation=corr){
   
   AR_matrix=AR_matrix(p,correlation)
   Dat = ModelMultiReg(n,p,pi,AR_matrix,tau)     ###generate the data
-  Res=DTM(Dat$X,Dat$M,Dat$Y,n,p,q,pi,B,ratio=0.5)
+  Res=DIMOC(Dat$X,Dat$M,Dat$Y,n,p,q,pi,B,ratio=0.5)
 
   return(list(Dat = Dat,Res = Res))
   closeAllConnections()
