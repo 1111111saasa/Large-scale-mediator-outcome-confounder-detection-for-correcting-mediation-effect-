@@ -1,4 +1,4 @@
-DTM
+DIMOC
 ================
 
 This study introduces a novel framework for detecting confounders in high-dimensional mediation models, addressing challenges in mediation analysis caused by confounding variables. The data-driven method uses symmetric data aggregation to construct test statistic pairs and applies a double filter for confounder identification. This approach controls the false discovery rate (FDR) while enhancing confounder detection. Theoretical and empirical analyses demonstrate that the method controls FDR asymptotically and ensures high detection power. Simulations show robust performance, emphasizing the importance of confounder detection in improving the accuracy of mediation effect estimates.
@@ -9,7 +9,7 @@ This file contains the exact code necessary to reproduce the numerical results p
 
 The code is organized into three main folders:
 
-1.DTM: This folder generates the toy example in Section 2 and the simulation results in Section 4.1.
+1.DIMOC: This folder generates the toy example in Section 2 and the simulation results in Section 4.1.
 
 2.Mediation Correction: This folder produces the simulation results discussed in Section 4.2.
 
@@ -17,13 +17,13 @@ The code is organized into three main folders:
 
 
 
-Guides for the codes in folder \code\DTM
+Guides for the codes in folder \code\DIMOC
 =========================================
 ## Enviroment 
 R-4.3.2
 
 ## Codes for reproducing results in Section 2
-\code\DTM\total_simu_code_DTM.R
+\code\DIMOC\total_simu_code_DIMOC.R
 
 Please note that the code contains several parameters, which we will explain one by one:
 
@@ -53,9 +53,9 @@ Please note that the code contains several parameters, which we will explain one
 
 ## Codes for reproducing results in Section 4.1
 
-\code\DTM\total_simu_code_DTM.R
+\code\DIMOC\total_simu_code_DIMOC.R
 
-\code\DTM\oracle_DTM.R
+\code\DIMOC\oracle_DIMOC.R
 To reproduce the results in figure 3, we need to fix n=400 and alter the p from 1000 to 5000 in the interval of 500.
 
 For the results in Table 1, we need to alter the `tau` and `pi01`.   
